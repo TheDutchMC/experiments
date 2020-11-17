@@ -1,5 +1,7 @@
 ; x86-64 Assembly
-; Compile: 
+; Compile: nasm -f elf64 -o helloworld.o helloworld.asm
+; Link: ld -o helloworld helloworld.o
+; Run: ./helloworld
 
 section .text
     global _start     ;must be declared for linker (ld)
