@@ -4,4 +4,4 @@
 - Create folder `input` and `output` in directory
 - Put playerdata files in `input`
 - Run python script
-- Run java script with the full path of output as argument
+- Run java program with the full path of output as argument
