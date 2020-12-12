@@ -2,6 +2,7 @@
 public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
+    public Transform player;
     public float speedMultiplier = 1000f;
     public float sidewaysForceMultiplier = 25f;
 
@@ -17,6 +18,10 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A)) {
             rb.AddForce(sidewaysForceMultiplier * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+
+        if(player.position.y < -1f) {
+            FindObjectOfType<GameManager>().EndGame(true);
         }
     }
 }
